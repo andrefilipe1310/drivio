@@ -1,0 +1,102 @@
+<ion-header [translucent]="true" class="header-custom">
+  <ion-toolbar>
+    
+    <ion-title><ion-icon name="wallet-outline"></ion-icon> Registro de ganhos</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+ 
+
+  <div id="container">
+    <ion-card class="card-metric">
+      <div>
+        <ion-card-header>
+          <ion-card-title>R$ 280,00</ion-card-title>
+          <ion-card-subtitle>Total Ganhos Hoje</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          +15% em relação a ontem
+        </ion-card-content>
+      </div>
+      <div class="div-icon">
+        <ion-icon name="arrow-up-circle-outline" size="large"></ion-icon>
+      </div>
+    </ion-card>
+
+    <ion-card class="card-metric">
+      <div>
+        <ion-card-header>
+          <ion-card-title>23</ion-card-title>
+          <ion-card-subtitle>Corridas Hoje</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          +4 corridas em relação a ontem
+        </ion-card-content>
+      </div>
+      <div class="div-icon">
+        <ion-icon name="document-text-outline" size="large"></ion-icon>
+      </div>
+    </ion-card>
+
+    <ion-card class="card-metric">
+      <div>
+        <ion-card-header>
+          <ion-card-title>R$ 12,17</ion-card-title>
+          <ion-card-subtitle>Média por Corrida</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          +5% em relação à semana passada
+        </ion-card-content>
+      </div>
+      <div class="div-icon">
+        <ion-icon name="time-outline" size="large"></ion-icon>
+      </div>
+    </ion-card>
+    <ion-card class="card-buttons">
+      <ion-card-header>
+        <ion-card-subtitle>Relatórios</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-button id="day">Diario</ion-button>
+        <ion-button id="week">Semanal</ion-button>
+        <ion-button id="year">Mensal</ion-button>
+      </ion-card-content>
+
+
+    </ion-card>
+    <canvas baseChart [data]="barChartData" [options]="barChartOptions" [type]="'bar'">
+    </canvas>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Corridas Recentes</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card class="card-race">
+          <ion-card-header>
+            <ion-grid>
+              <ion-row>
+                <ion-col size-md="12">
+                  <ion-card-subtitle>
+                    Pinheiros → Vila Madalena
+                  </ion-card-subtitle>
+                </ion-col>
+                <ion-col size-md="12">
+                  <ion-card-title>
+                    R$ 18,50
+                  </ion-card-title>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-header>
+          <div class="race-price">
+            <p>10/04 - 19:32 • Uber</p>
+          </div>
+        </ion-card>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

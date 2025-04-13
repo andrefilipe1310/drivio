@@ -1,0 +1,34 @@
+.goal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .goal-footer {
+    text-align: center;
+    margin-top: 6px;
+    font-size: 0.9rem;
+  }
+  
+  .progress-bar-custom {
+    height: 10px;
+    border-radius: 8px;
+    --background: #e0e0e0;
+    --progress-background: #14A662; 
+  }
+
+  .goal-card {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   --background:#e0e0e0;
+    & ion-card-title {
+        font-size: 1rem;
+    }
+  }
+  .goal-progress-card {
+    & ion-card-title{
+        font-size: 1.5rem;
+    }
+  }

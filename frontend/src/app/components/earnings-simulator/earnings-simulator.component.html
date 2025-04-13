@@ -1,0 +1,11 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Simulador de Ganhos</ion-card-title>
+    <ion-card-subtitle>Baseado em horas rodadas</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-range [min]="0" [max]="16" [value]="8"  [pin]="true" labelPlacement="stacked" label="Horas por dia"></ion-range>
+    <ion-range [min]="0" [max]="7" [value]="5"  [pin]="true" labelPlacement="stacked" label="Dias por semana"></ion-range>
+    <ion-range [min]="0" [max]="50" [value]="15"  [pin]="true" labelPlacement="stacked" label="Valor médio por hora (R$)"></ion-range>
+  </ion-card-content>
+</ion-card>

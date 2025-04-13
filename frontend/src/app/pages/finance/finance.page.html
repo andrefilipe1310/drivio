@@ -1,0 +1,30 @@
+<ion-header [translucent]="true" class="header-custom">
+  <ion-toolbar>
+    <ion-title><ion-icon name="cash-outline"></ion-icon> Finanças</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>R$ 226,43</ion-card-title>
+      <ion-card-subtitle><ion-icon name="calendar-clear-outline"></ion-icon> Lucro Diário</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Média do período</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>R$ 1.585,00</ion-card-title>
+      <ion-card-subtitle><ion-icon name="cash-outline"></ion-icon> Total do Período</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>7 dias</p>
+    </ion-card-content>
+  </ion-card>
+  <app-card-goals></app-card-goals>
+  <canvas baseChart [data]="barChartData" [options]="barChartOptions" [type]="'bar'">
+  </canvas>
+ <app-earnings-simulator></app-earnings-simulator>
+</ion-content>

@@ -1,0 +1,112 @@
+<ion-header [translucent]="true" class="header-custom">
+  <ion-toolbar>
+    
+    <ion-title><ion-icon name="wallet-outline"></ion-icon> Controle de despesas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding content-bg">
+
+  <ion-card id="expensive-card" class="highlight-card">
+    <ion-card-header>
+      <ion-card-title>R$ 5000,00</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Total de despesas
+    </ion-card-content>
+  </ion-card>
+
+  <ion-text color="dark" class="section-title">Minhas despesas</ion-text>
+  <ion-searchbar class="custom-searchbar"></ion-searchbar>
+
+  <div class="chip-scroll-container">
+    <ion-chip color="success">
+      <ion-label>Comida</ion-label>
+    </ion-chip>
+    <ion-chip color="primary">
+      <ion-label>Combustível</ion-label>
+    </ion-chip>
+    <ion-chip color="tertiary">
+      <ion-label>Oficina</ion-label>
+    </ion-chip>
+    <ion-chip color="warning">
+      <ion-label>Aluguel</ion-label>
+    </ion-chip>
+    <ion-chip color="medium">
+      <ion-label>Imprevistos</ion-label>
+    </ion-chip>
+  </div>
+
+  <ion-card class="card-expense" (click)="toggleDetails()" [class.expanded]="showDetails">
+    <ion-item lines="none">
+      <ion-avatar slot="start" class="category-icon" [ngStyle]="{'background-color': '#3A3B40'}">
+        <ion-icon name="restaurant-outline" color="success"></ion-icon>
+      </ion-avatar>
+  
+      <ion-label>
+        <h2 class="expense-title">Almoço</h2>
+        <p class="expense-date">09/04/2025</p>
+      </ion-label>
+  
+      <div slot="end" class="expense-value">
+        R$ 25,00
+      </div>
+    </ion-item>
+  
+    <ion-grid *ngIf="showDetails" class="expense-details">
+      <ion-row>
+        <ion-col size="6">
+          <span class="category-label">Categoria</span>
+        </ion-col>
+        <ion-col size="6" class="text-end">
+          <span class="category-value">Alimentação</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="text-end">
+          <ion-text color="danger" class="delete-button">Excluir</ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card class="card-expense" (click)="toggleDetails()" [class.expanded]="showDetails">
+    <ion-item lines="none">
+      <ion-avatar slot="start" class="category-icon" [ngStyle]="{'background-color': '#3A3B40'}">
+        <ion-icon name="restaurant-outline" color="success"></ion-icon>
+      </ion-avatar>
+  
+      <ion-label>
+        <h2 class="expense-title">Almoço</h2>
+        <p class="expense-date">09/04/2025</p>
+      </ion-label>
+  
+      <div slot="end" class="expense-value">
+        R$ 25,00
+      </div>
+    </ion-item>
+  
+    <ion-grid *ngIf="showDetails" class="expense-details">
+      <ion-row>
+        <ion-col size="6">
+          <span class="category-label">Categoria</span>
+        </ion-col>
+        <ion-col size="6" class="text-end">
+          <span class="category-value">Alimentação</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="text-end">
+          <ion-text color="danger" class="delete-button">Excluir</ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+    
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button color="success">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
